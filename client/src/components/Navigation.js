@@ -9,7 +9,7 @@ function Navigation() {
 
     return (
         <Navbar collapseOnSelect expand='lg' variant='dark' bg='dark'>
-            <Navbar.Brand as={NavLink} to={routes}>
+            <Navbar.Brand as={NavLink} to={routes.home}>
                 Task Manager
             </Navbar.Brand>
             <Navbar.Toggle aria-controls='responsive-navbar-nav' />

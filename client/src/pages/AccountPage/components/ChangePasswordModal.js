@@ -33,11 +33,11 @@ export default function ChangePasswordModal({ isOpen, close }) {
 						/>
 						{errors?.password && (
 							<Form.Text>
-							<Alert variant="danger">
-								{errors.password.message}
-							</Alert>
-						</Form.Text>
-							)}
+								<Alert variant="danger">
+									{errors.password.message}
+								</Alert>
+							</Form.Text>
+						)}
 					</Form.Group>
 				</Form>
 			</Modal.Body>

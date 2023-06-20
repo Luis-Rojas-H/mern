@@ -9,17 +9,25 @@ export default function AuthProvider({ children }) {
     const [user, setUser] = useState(null);
 
     const login = (userCredentials) => {
-        setUser({ id: '1', role: roles.admin });
+        setUser({ id: '1', name: 'Luis', email: 'larojash@uni.pe', role: roles.admin });
     };
 
     const logout = () => setUser(null);
 
+    const updateUser = (data) => {
+		setUser({
+			...user,
+			...data
+		})
+	}
+
     const isLogged = () => !!user;
-    
+
     const hasRole = (role) => user?.role === role;
-    
+
     const contextValue = {
         user,
+        updateUser,
         isLogged,
         hasRole,
         login,
